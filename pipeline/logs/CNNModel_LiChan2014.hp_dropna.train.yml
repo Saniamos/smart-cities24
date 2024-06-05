@@ -1,0 +1,41 @@
+loss_function: null
+optimizer: null
+data_params:
+  shuffle: true
+  batch_size: 128
+  fix_nan: false
+model_params:
+  dropout_probability: 0.25
+  kernel_size: 3
+  stride: 1
+  padding: 1
+  number_joints: 21
+  output_size: 63
+  local_response_norm_alpha: 0.0025
+  local_response_norm_beta: 0.75
+scheduler_params:
+  milestones:
+  - 10
+  - 20
+  gamma: 0.1
+optimizer_params:
+  lr: 0.0001
+trainer_params:
+  max_epochs: 100
+  precision: '32'
+early_stopping_params:
+  monitor: val_loss
+  mode: min
+  patience: 5
+date: 13.04.2024 03:38:41
+RUN:
+  mode: train
+  lib: CNNModel_LiChan2014
+  params: hp_dropna
+  base_path: /home/yale1/ma-jonah-data//
+  debug: false
+  computease: true
+  dry_run: false
+  num_worker: 40
+  model_checkpoint_path: /share/temp/yhartmann/smart-cities-journal-based-on-jonahs-ma/pipeline/checkpoints/CNNModel_LiChan2014.hp_dropna.ckpt
+date_end: 13.04.2024 14:48:09

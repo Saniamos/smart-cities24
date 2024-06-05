@@ -1,0 +1,47 @@
+name: smart-cities
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - torchaudio=0.13.1
+  - pytorch-cuda=11.7
+
+  - pip:
+    - pip
+    - wheel 
+    - cython
+    - setuptools
+
+    - pandas
+    - numpy
+    - scipy
+    - scikit-learn
+    - numba
+    - networkx
+
+    - matplotlib
+    - seaborn
+
+    - jupyterlab
+
+    - pyarrow
+    - pqdm
+
+    - opencv-python-headless
+
+    - torch
+    - lightning
+    - torch-summary
+    - tensorboard
+    - visualkeras
+
+    - papermill
+    - scrapbook
+    - click
+    - codecarbon

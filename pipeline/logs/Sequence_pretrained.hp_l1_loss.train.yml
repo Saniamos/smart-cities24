@@ -1,0 +1,38 @@
+loss_function: null
+optimizer: null
+data_params:
+  batch_size: 16
+  context: 15
+  shuffle: true
+model_params:
+  vision_model_lib: ResNet50_SunShangetAl
+  vision_model_path: ./checkpoints/ResNet50_SunShangetAl.hp_l1_loss.ckpt
+  sequence_model_lib: T_Sequence
+  sequence_model_path: ./checkpoints/T_Sequence.hp_l1_loss.ckpt
+  retrain: false
+scheduler_params:
+  milestones:
+  - 10
+  - 20
+  gamma: 0.1
+optimizer_params:
+  lr: 0.0001
+trainer_params:
+  max_epochs: 1
+  precision: '32'
+early_stopping_params:
+  monitor: val_loss
+  mode: min
+  patience: 5
+date: 15.04.2024 10:48:02
+RUN:
+  mode: train
+  lib: Sequence_pretrained
+  params: hp_l1_loss
+  base_path: /home/yale1/ma-jonah-data//
+  debug: false
+  computease: true
+  dry_run: false
+  num_worker: 3
+  model_checkpoint_path: /share/temp/yhartmann/smart-cities-journal-based-on-jonahs-ma/pipeline/checkpoints/Sequence_pretrained.hp_l1_loss.ckpt
+date_end: 15.04.2024 12:12:09

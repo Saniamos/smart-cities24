@@ -1,0 +1,33 @@
+loss_function: null
+optimizer: null
+data_params:
+  shuffle: true
+  batch_size: 46
+  fix_nan: true
+model_params:
+  output_size: 63
+scheduler_params:
+  milestones:
+  - 10
+  - 20
+  gamma: 0.1
+optimizer_params:
+  lr: 0.0001
+trainer_params:
+  max_epochs: 100
+  precision: '32'
+early_stopping_params:
+  monitor: val_loss
+  mode: min
+  patience: 5
+date: 10.04.2024 14:54:48
+RUN:
+  mode: train
+  lib: OwnBaselineCNN
+  params: hp_l1_loss
+  base_path: /home/yale1/ma-jonah-data//
+  debug: false
+  computease: false
+  dry_run: false
+  num_worker: 40
+  model_checkpoint_path: /share/temp/yhartmann/smart-cities-journal-based-on-jonahs-ma/pipeline/checkpoints/OwnBaselineCNN.hp_l1_loss.ckpt

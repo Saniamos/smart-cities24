@@ -1,0 +1,32 @@
+loss_function: null
+optimizer: null
+data_params:
+  shuffle: true
+  batch_size: 46
+model_params:
+  output_size: 63
+scheduler_params:
+  milestones:
+  - 10
+  - 20
+  gamma: 0.1
+optimizer_params:
+  lr: 0.0001
+trainer_params:
+  max_epochs: 100
+  precision: '32'
+early_stopping_params:
+  monitor: val_loss
+  mode: min
+  patience: 10
+date: 25.03.2024 08:02:21
+RUN:
+  mode: train
+  lib: ResNet50_SunShangetAl
+  params: hp_mse_loss
+  base_path: /share/data/yhartmann/data/ma-jonah/
+  debug: false
+  computease: false
+  dry_run: false
+  num_worker: 40
+  model_checkpoint_path: /share/temp/yhartmann/smart-cities-journal-based-on-jonahs-ma/pipeline/checkpoints/ResNet50_SunShangetAl.hp_mse_loss.ckpt

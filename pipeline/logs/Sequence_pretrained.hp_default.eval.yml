@@ -1,0 +1,329 @@
+loss_function: null
+optimizer: null
+data_params:
+  batch_size: 16
+  context: 15
+  shuffle: true
+model_params:
+  vision_model_lib: ResNet50_SunShangetAl
+  vision_model_path: ./checkpoints/ResNet50_SunShangetAl.hp_l1_loss.ckpt
+  sequence_model_lib: T_Sequence
+  sequence_model_path: ./checkpoints/T_Sequence.hp_l1_loss.ckpt
+  retrain: false
+scheduler_params:
+  milestones:
+  - 10
+  - 20
+  gamma: 0.1
+optimizer_params:
+  lr: 0.0001
+trainer_params:
+  max_epochs: 1
+  precision: '32'
+  devices: 1
+early_stopping_params:
+  monitor: val_loss
+  mode: min
+  patience: 5
+date: 16.04.2024 10:50:27
+RUN:
+  mode: eval
+  lib: Sequence_pretrained
+  params: hp_default
+  base_path: /home/yale1/ma-jonah-data//
+  debug: false
+  computease: true
+  dry_run: false
+  num_worker: 3
+  model_checkpoint_path: /share/temp/yhartmann/smart-cities-journal-based-on-jonahs-ma/pipeline/checkpoints/Sequence_pretrained.hp_default.ckpt
+RESULTS:
+  skeleton:
+  - loss/dataloader_idx_0: 717.0382084010652
+    pck/dataloader_idx_0: 76.50638580322266
+    pmpkpe/dataloader_idx_0: 17.89575958251953
+    mpkpe/dataloader_idx_0: 19.671125411987305
+  - loss/dataloader_idx_1: 718.1745384666356
+    pck/dataloader_idx_1: 77.03834533691406
+    pmpkpe/dataloader_idx_1: 16.76604652404785
+    mpkpe/dataloader_idx_1: 19.501506805419922
+  gait_0_d15:
+    prd_bone_stability: 1.5507616070509016
+    prd_bone_stability_per_joint:
+      Ab: 0.12896996815375233
+      Chest: 0.2898677804851417
+      Head: 0.3417460796654624
+      Hip: 0.0
+      LFArm: 2.1041502439282076
+      LFoot: 1.0359146855501875
+      LHand: 1.0493477217577631
+      LShin: 0.6653427241985921
+      LShoulder: 2.9393892869334155
+      LThigh: 1.4597816197194815
+      LToe: 1.5994296388462188
+      LUArm: 6.260126669655031
+      Neck: 0.2923242389750567
+      RFArm: 1.046644347150861
+      RFoot: 0.9119515034675058
+      RHand: 1.0024083985472394
+      RShin: 0.5957953121551548
+      RShoulder: 2.8188784494687225
+      RThigh: 1.4352274444392015
+      RToe: 1.7909591605931243
+      RUArm: 4.7977384743788125
+    sp: 130.8063404548587
+    msld: -13.938110140030886
+    dr: 108.2582110226448
+    sdd: 14980.0
+  gait_0_d20:
+    prd_bone_stability: 1.5507616070509016
+    prd_bone_stability_per_joint:
+      Ab: 0.12896996815375233
+      Chest: 0.2898677804851417
+      Head: 0.3417460796654624
+      Hip: 0.0
+      LFArm: 2.1041502439282076
+      LFoot: 1.0359146855501875
+      LHand: 1.0493477217577631
+      LShin: 0.6653427241985921
+      LShoulder: 2.9393892869334155
+      LThigh: 1.4597816197194815
+      LToe: 1.5994296388462188
+      LUArm: 6.260126669655031
+      Neck: 0.2923242389750567
+      RFArm: 1.046644347150861
+      RFoot: 0.9119515034675058
+      RHand: 1.0024083985472394
+      RShin: 0.5957953121551548
+      RShoulder: 2.8188784494687225
+      RThigh: 1.4352274444392015
+      RToe: 1.7909591605931243
+      RUArm: 4.7977384743788125
+    sp: 114.00832177531207
+    msld: -5.792536141363087
+    dr: 105.86123502059824
+    sdd: 5859.0
+  gait_0_d25:
+    prd_bone_stability: 1.5507616070509016
+    prd_bone_stability_per_joint:
+      Ab: 0.12896996815375233
+      Chest: 0.2898677804851417
+      Head: 0.3417460796654624
+      Hip: 0.0
+      LFArm: 2.1041502439282076
+      LFoot: 1.0359146855501875
+      LHand: 1.0493477217577631
+      LShin: 0.6653427241985921
+      LShoulder: 2.9393892869334155
+      LThigh: 1.4597816197194815
+      LToe: 1.5994296388462188
+      LUArm: 6.260126669655031
+      Neck: 0.2923242389750567
+      RFArm: 1.046644347150861
+      RFoot: 0.9119515034675058
+      RHand: 1.0024083985472394
+      RShin: 0.5957953121551548
+      RShoulder: 2.8188784494687225
+      RThigh: 1.4352274444392015
+      RToe: 1.7909591605931243
+      RUArm: 4.7977384743788125
+    sp: 104.13284132841328
+    msld: 0.28176612038703297
+    dr: 104.44306272620325
+    sdd: 1329.0
+  gait_0_d30:
+    prd_bone_stability: 1.5507616070509016
+    prd_bone_stability_per_joint:
+      Ab: 0.12896996815375233
+      Chest: 0.2898677804851417
+      Head: 0.3417460796654624
+      Hip: 0.0
+      LFArm: 2.1041502439282076
+      LFoot: 1.0359146855501875
+      LHand: 1.0493477217577631
+      LShin: 0.6653427241985921
+      LShoulder: 2.9393892869334155
+      LThigh: 1.4597816197194815
+      LToe: 1.5994296388462188
+      LUArm: 6.260126669655031
+      Neck: 0.2923242389750567
+      RFArm: 1.046644347150861
+      RFoot: 0.9119515034675058
+      RHand: 1.0024083985472394
+      RShin: 0.5957953121551548
+      RShoulder: 2.8188784494687225
+      RThigh: 1.4352274444392015
+      RToe: 1.7909591605931243
+      RUArm: 4.7977384743788125
+    sp: 104.71014492753623
+    msld: 0.22262216875182617
+    dr: 104.90601817875337
+    sdd: 865.0
+  gait_0_d35:
+    prd_bone_stability: 1.5507616070509016
+    prd_bone_stability_per_joint:
+      Ab: 0.12896996815375233
+      Chest: 0.2898677804851417
+      Head: 0.3417460796654624
+      Hip: 0.0
+      LFArm: 2.1041502439282076
+      LFoot: 1.0359146855501875
+      LHand: 1.0493477217577631
+      LShin: 0.6653427241985921
+      LShoulder: 2.9393892869334155
+      LThigh: 1.4597816197194815
+      LToe: 1.5994296388462188
+      LUArm: 6.260126669655031
+      Neck: 0.2923242389750567
+      RFArm: 1.046644347150861
+      RFoot: 0.9119515034675058
+      RHand: 1.0024083985472394
+      RShin: 0.5957953121551548
+      RShoulder: 2.8188784494687225
+      RThigh: 1.4352274444392015
+      RToe: 1.7909591605931243
+      RUArm: 4.7977384743788125
+    sp: 115.24163568773234
+    msld: -6.049253770112614
+    dr: 109.74091024792699
+    sdd: 2917.0
+  gait_1_d15:
+    prd_bone_stability: 1.5259615420423143
+    prd_bone_stability_per_joint:
+      Ab: 0.1363630955361474
+      Chest: 0.290768232771315
+      Head: 0.3427360578257041
+      Hip: 0.0
+      LFArm: 2.085390575036948
+      LFoot: 1.0612331456999773
+      LHand: 1.0932973386580924
+      LShin: 0.6610224149883628
+      LShoulder: 2.802681411951025
+      LThigh: 1.4397990827683476
+      LToe: 1.5441231265434245
+      LUArm: 5.856274924134728
+      Neck: 0.2980732589823687
+      RFArm: 1.0600829258551252
+      RFoot: 0.9280580560650044
+      RHand: 1.0073033067146548
+      RShin: 0.6160380073047506
+      RShoulder: 2.841580531663296
+      RThigh: 1.4126000645182422
+      RToe: 1.7711493838920487
+      RUArm: 4.796617441979037
+    sp: 132.00332502078138
+    msld: -13.150650182387466
+    dr: 111.82586009468143
+    sdd: 13685.0
+  gait_1_d20:
+    prd_bone_stability: 1.5259615420423143
+    prd_bone_stability_per_joint:
+      Ab: 0.1363630955361474
+      Chest: 0.290768232771315
+      Head: 0.3427360578257041
+      Hip: 0.0
+      LFArm: 2.085390575036948
+      LFoot: 1.0612331456999773
+      LHand: 1.0932973386580924
+      LShin: 0.6610224149883628
+      LShoulder: 2.802681411951025
+      LThigh: 1.4397990827683476
+      LToe: 1.5441231265434245
+      LUArm: 5.856274924134728
+      Neck: 0.2980732589823687
+      RFArm: 1.0600829258551252
+      RFoot: 0.9280580560650044
+      RHand: 1.0073033067146548
+      RShin: 0.6160380073047506
+      RShoulder: 2.841580531663296
+      RThigh: 1.4126000645182422
+      RToe: 1.7711493838920487
+      RUArm: 4.796617441979037
+    sp: 114.44350042480883
+    msld: -5.003249798158635
+    dr: 107.82640558638437
+    sdd: 5816.0
+  gait_1_d25:
+    prd_bone_stability: 1.5259615420423143
+    prd_bone_stability_per_joint:
+      Ab: 0.1363630955361474
+      Chest: 0.290768232771315
+      Head: 0.3427360578257041
+      Hip: 0.0
+      LFArm: 2.085390575036948
+      LFoot: 1.0612331456999773
+      LHand: 1.0932973386580924
+      LShin: 0.6610224149883628
+      LShoulder: 2.802681411951025
+      LThigh: 1.4397990827683476
+      LToe: 1.5441231265434245
+      LUArm: 5.856274924134728
+      Neck: 0.2980732589823687
+      RFArm: 1.0600829258551252
+      RFoot: 0.9280580560650044
+      RHand: 1.0073033067146548
+      RShin: 0.6160380073047506
+      RShoulder: 2.841580531663296
+      RThigh: 1.4126000645182422
+      RToe: 1.7711493838920487
+      RUArm: 4.796617441979037
+    sp: 105.4478301015697
+    msld: -0.41485299345204396
+    dr: 104.9597389612161
+    sdd: 1384.0
+  gait_1_d30:
+    prd_bone_stability: 1.5259615420423143
+    prd_bone_stability_per_joint:
+      Ab: 0.1363630955361474
+      Chest: 0.290768232771315
+      Head: 0.3427360578257041
+      Hip: 0.0
+      LFArm: 2.085390575036948
+      LFoot: 1.0612331456999773
+      LHand: 1.0932973386580924
+      LShin: 0.6610224149883628
+      LShoulder: 2.802681411951025
+      LThigh: 1.4397990827683476
+      LToe: 1.5441231265434245
+      LUArm: 5.856274924134728
+      Neck: 0.2980732589823687
+      RFArm: 1.0600829258551252
+      RFoot: 0.9280580560650044
+      RHand: 1.0073033067146548
+      RShin: 0.6160380073047506
+      RShoulder: 2.841580531663296
+      RThigh: 1.4126000645182422
+      RToe: 1.7711493838920487
+      RUArm: 4.796617441979037
+    sp: 110.98398169336384
+    msld: -4.3726200537078626
+    dr: 106.45870649609901
+    sdd: 2279.0
+  gait_1_d35:
+    prd_bone_stability: 1.5259615420423143
+    prd_bone_stability_per_joint:
+      Ab: 0.1363630955361474
+      Chest: 0.290768232771315
+      Head: 0.3427360578257041
+      Hip: 0.0
+      LFArm: 2.085390575036948
+      LFoot: 1.0612331456999773
+      LHand: 1.0932973386580924
+      LShin: 0.6610224149883628
+      LShoulder: 2.802681411951025
+      LThigh: 1.4397990827683476
+      LToe: 1.5441231265434245
+      LUArm: 5.856274924134728
+      Neck: 0.2980732589823687
+      RFArm: 1.0600829258551252
+      RFoot: 0.9280580560650044
+      RHand: 1.0073033067146548
+      RShin: 0.6160380073047506
+      RShoulder: 2.841580531663296
+      RThigh: 1.4126000645182422
+      RToe: 1.7711493838920487
+      RUArm: 4.796617441979037
+    sp: 114.72754050073638
+    msld: -6.121286411142236
+    dr: 109.36584545660057
+    sdd: 2502.0
+date_end: 16.04.2024 12:58:01
